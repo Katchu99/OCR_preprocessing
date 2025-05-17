@@ -1,2 +1,4 @@
 pprenv/
+__pycache__/
 test.py
+Input/test*
