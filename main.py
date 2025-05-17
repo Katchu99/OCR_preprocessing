@@ -1,7 +1,6 @@
 # LIBRARY IMPORTS
 import numpy as np
 from PIL import Image
-from PyPDF2 import PdfFileReader
 from pdf2image import convert_from_path
 from pathlib import Path
 
