@@ -1,7 +1,12 @@
+<<<<<<< HEAD
+=======
+# LIBRARY IMPORTS
+>>>>>>> 1cf101b99e54028bcf27951f05fedc351b9b35d0
 import sys
 from pathlib import Path
 from pdf2image import convert_from_path
 
+# FUNCTIONS
 def set_args(input_path):
     file_path: list[Path] = []
 
