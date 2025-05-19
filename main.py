@@ -19,5 +19,3 @@ file_paths: list[Path] = file_utils.set_args(input_path) # Path to file to be pr
 if __name__ == "__main__":
     file_utils.file_exists(file_paths) # throws FileNotFoundError if file does not exist
     file_utils.check_file_type(file_paths) # throws TypeError if file type is not supported and converts pdfs to images
-    image_paths = file_utils.get_image_paths()
-

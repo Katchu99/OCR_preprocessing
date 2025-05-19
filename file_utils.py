@@ -5,23 +5,23 @@ from pdf2image import convert_from_path
 
 # FUNCTIONS
 def set_args(input_path):
-    file_path: list[Path] = []
+    file_paths: list[Path] = []
 
     if len(sys.argv) > 1:
         args = list(sys.argv[1:])
         print(args)
         for i, arg in enumerate(args):
-            file_path.append(input_path.joinpath(arg))
+            file_paths.append(input_path.joinpath(arg))
             #print(f"File{i+1} Path: {arg}")
 
-        return file_path
+        return file_paths
 
     else:
         raise TypeError("Error: Expected at least one argument (name of file), but none were given.\nUsage: python script.py <name_of_file>")
 
-def file_exists(file_path: list[Path]):
+def file_exists(file_paths: list[Path]):
     exception_str: str = ""
-    for path in file_path:
+    for path in file_paths:
         if not path.is_file():
             exception_str += f"\nFile {path.name} not found."
         else:
@@ -64,5 +64,5 @@ def pdf_to_image(pdf_paths: list[Path]):
 
     return img_paths
 
-def get_image_paths(input_path):
-    pass
+# def get_image_paths(input_path):
+#     pass
